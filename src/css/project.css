@@ -1,0 +1,67 @@
+.project {
+    border: 0;
+    border-radius: .25rem;
+    background: white;
+}
+
+.project img {
+  border-radius: .25rem .25rem 0 0;
+}
+
+.project-view {
+    position: relative;
+    cursor: default;
+}
+
+.project-view img {
+  position: relative;
+  display: block;
+}
+
+.img-p {
+  width:100%;
+}
+.project .project-body .project-text {
+    font-size: .9rem;
+    color: #747373;
+    font-weight: 400;
+}
+
+.project-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.project-title {
+  margin-bottom: .75rem;
+  font-weight: 600;
+  color: rgb(0,0,0);
+}
+
+.btn-project {
+  background-color: rgba(0,0,0,0.7);
+  border-color: rgba(0,0,0,0.7);
+  margin: 0px 10px;
+  border-radius: .25em;
+  min-width: 6.25em;
+}
+
+.btn-project:hover {
+  background-color: rgba(0,0,0,0.6);
+  border-color: rgba(0,0,0,0.6);
+}
+
+.pagination-center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.project-appear {
+   opacity: 0.01;
+}
+.project-appear.project-appear-active {
+   opacity: 1;
+   transition: opacity 500ms ease-in;
+}
