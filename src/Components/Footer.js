@@ -5,7 +5,7 @@ import "../css/App.css";
 class Footer extends Component {
   render(){
     return(
-      <div class="container text-center footer-container">
+      <div class="row text-center footer-container">
         <p class="footer-copyright">Copyright &copy; Szymon Antonik 2018</p>
       </div>
     );

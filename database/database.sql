@@ -1,5 +1,6 @@
 CREATE TABLE Projects (
   `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  CategoryId INT,
   Title varchar(60) not null,
   Technologies varchar(100) not null,
   Text varchar(255) ,

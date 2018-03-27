@@ -75,7 +75,15 @@ function jsonResponse($success, $message)
 
 function getProjectsCount($categoryId) {
 	global $conn;
-	$query = $conn->prepare("SELECT COUNT(*) FROM Projects");
+	$sql = "SELECT COUNT(*) FROM Projects";
+
+	if($categoryId != -1)
+		$sql .= " WHERE CategoryId = :cat ";
+
+	$query = $conn->prepare($sql);
+
+	if($categoryId != -1)
+		$query->bindValue(':cat', intval($categoryId), PDO::PARAM_INT);
 
 	$query->execute();
 	$response['Count'] = $query->fetchColumn();
@@ -103,6 +111,7 @@ function getProjects($projectsPerPage, $page, $categoryId = -1)
 		$query->execute();
 
     $response = array();
+		$response['count'] = $num_rows;
 		$response['projects'] = array();
 
     while($fetch = $query->fetch(PDO::FETCH_ASSOC))

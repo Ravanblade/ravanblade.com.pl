@@ -9,19 +9,20 @@ class ProjectsPage extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { projects:[], pageNumber: 0 }
+    this.state = { projects:[], pageNumber: 0, category: -1, pageCount: 0 }
     this.handleChangePage = this.handleChangePage.bind(this);
   }
 
-   getProjects() {
-      axios.get("http://2bdesign.lh.pl/all/API/ravanblade/db_request.php", {
+   getProjects = async (pageN = 0) => {
+      await axios.get("http://2bdesign.lh.pl/all/API/ravanblade/db_request.php", {
         headers: {
             'Access-Control-Allow-Origin': '*'
           },
           params: {
             type: 0,
             projectsPerPage: 6,
-            page: this.state.pageNumber
+            page: pageN,
+            categoryId: this.state.category
           }
         })
         .then((res) => {
@@ -31,10 +32,9 @@ class ProjectsPage extends Component {
               <Project title={project.Title} imgUrl={project.ImgUrl}
                  url={project.Url} technologies={project.Technologies} text={project.Text} codeUrl={project.CodeUrl} codeText={project.CodeText} urlText={project.UrlText}/>
              )})
-            this.setState({projects: projects});
 
+            this.setState({projects: projects, pageCount: res.data.count});
         });
-
   }
 
 
@@ -45,10 +45,16 @@ class ProjectsPage extends Component {
   handleChangePage = (e, page) => {
     e.preventDefault();
     this.setState({pageNumber: page});
-    this.getProjects();
+    this.getProjects(page);
   }
 
   render() {
+    let pro = [];
+    for (let i = 0; i < this.state.pageCount/6; i++) {
+        pro.push(<li class="page-item"><a onClick={(e) => this.handleChangePage(e, i)} class="page-link" href="#">{i+1}</a></li>);
+    }
+
+
     return(
       <div class="container wrapper fadeIn">
         <div class="row mb-4 fadeIn">
@@ -56,10 +62,7 @@ class ProjectsPage extends Component {
           </div>
           <div class="row">
             <ul class="pagination pagination-center">
-              {this.state.projects.map((object, i) =>{
-                return(
-               <li class="page-item"><a onClick={(e) => this.handleChangePage(e, i)} class="page-link" href="#">{i+1}</a></li>)})
-               }
+                {pro}
            </ul>
           </div>
       </div>

@@ -15,6 +15,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div class="wrapper wrapper-background">
+          <div class="container">
           <Navigationbar webPageName="PORTFOLIO"/>
             <ReactCSSTransitionGroup transitionName = "project"
                transitionAppear = {true} transitionAppearTimeout = {500}
@@ -23,8 +24,10 @@ class App extends Component {
           <Route exact path="/HomePage" component={HomePage} />
           <Route path="/AboutPage" component={AboutPage} />
           <Route path="/ProjectsPage" component={ProjectsPage} />
-          </ReactCSSTransitionGroup>
           <Footer/>
+          </ReactCSSTransitionGroup>
+
+          </div>
         </div>
       </BrowserRouter>
     );

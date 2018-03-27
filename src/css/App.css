@@ -136,7 +136,9 @@ a:focus, a:hover {
 
 #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
   outline: none;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: .25em;
+
 }
 
 @media (min-width: 992px) {
@@ -158,7 +160,9 @@ a:focus, a:hover {
   }
   #mainNav .nav-link.active {
     outline: none;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: .25em;
+
   }
   #mainNav .nav-link.active:hover {
     color: white;
@@ -311,9 +315,12 @@ footer p {
 }
 
 .footer-copyright {
-  font-size: 13px ;
-  margin-bottom: 2vh;
-  margin-top: 2vh;
+  font-size: 13px;
+  margin-bottom: 5vh;
+  margin-top: 13vh;
+  padding-bottom: 2vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-container {
