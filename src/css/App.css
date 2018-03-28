@@ -38,10 +38,21 @@ html {
   color: white;
   background: url("../img/intro-bg.jpg") no-repeat bottom center scroll;
   background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: 120% 120%;
+  -moz-background-size: 120% 110%;
+  -o-background-size: 120% 120%;
+  background-size: 120% 120%;
+  background-position: center center;
+  animation: zoom 20s infinite alternate;
+}
+
+@keyframes zoom {
+  0% {
+    background-size: 120% 120%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
 }
 
 .app-appear {
@@ -99,6 +110,7 @@ a:focus, a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   background-color: black;
   height: 8vh;
+  border-bottom: 1px solid black;
 }
 
 #mainNav .navbar-toggler {

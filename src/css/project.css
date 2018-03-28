@@ -41,8 +41,8 @@
 }
 
 .btn-project {
-  background-color: rgba(0,0,0,0.7);
-  border-color: rgba(0,0,0,0.7);
+  background-color: #343a40;
+  border-color: #343a40;
   margin: 0px 10px;
   border-radius: .25em;
   min-width: 6.25em;
@@ -64,4 +64,11 @@
 .project-appear.project-appear-active {
    opacity: 1;
    transition: opacity 500ms ease-in;
+}
+.project-leave {
+  opacity: 1;
+}
+.project-leave.project-leave-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
 }

@@ -1,0 +1,36 @@
+.progress{
+	border-radius: 20px;
+	height: 25px;
+}
+.skill-name{
+	text-transform: uppercase;
+	margin-left: 10px;
+	padding-left:10px;
+	padding-top: 2.5px;
+	float:left;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.1em;
+}
+
+.progress .progress-bar, .progress .progress-bar.progress-bar-default {
+    background-color: rgba(52,58,64,1) ;
+}
+.progress  .progress-bar{
+    animation-name: animateBar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.0s;
+}
+
+.skill-text {
+  color: black;
+}
+
+.skill-row {
+  margin-top:1em;
+}
+
+@keyframes animateBar {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0);}
+}
