@@ -21,7 +21,8 @@ html {
 }
 
 .wrapper {
-	height: 82vh;
+	//height: 82vh;
+  height: auto;
 }
 
 .white-fade {
@@ -44,6 +45,7 @@ html {
   background-size: 120% 120%;
   background-position: center center;
   animation: zoom 20s infinite alternate;
+  height:60em;
 }
 
 @keyframes zoom {
@@ -122,11 +124,37 @@ a:focus, a:hover {
 
 #mainNav .navbar-brand {
   font-weight: 700;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 #mainNav a {
   color: white;
 }
+#mainNav .navbar-nav {
+  background-color: #343a40 !important;
+  animation-name: grow .3s ease-in-out;;
+
+}
+.collapse.show {
+
+}
+
+@keyframes grow {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 
 #mainNav .navbar-nav .nav-item {
   -webkit-transition: background 0.3s ease-in-out;
@@ -328,10 +356,8 @@ footer p {
 
 .footer-copyright {
   font-size: 13px;
-  margin-bottom: 5vh;
-  margin-top: 13vh;
-  padding-bottom: 2vh;
-  margin-left: auto;
+  margin-top: 2em;
+  margin-left: 2em;
   margin-right: auto;
 }
 

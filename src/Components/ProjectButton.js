@@ -5,7 +5,7 @@ import "../css/project.css";
 class ProjectButton extends Component {
   render() {
     return(
-      <a href={this.props.url} class="btn btn-primary btn-md btn-project">{this.props.text}
+      <a target="_blank" href={this.props.url} class="btn btn-primary btn-md btn-project">{this.props.text}
       <i class={this.props.icon}></i></a>
     );
   }

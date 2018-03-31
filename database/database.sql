@@ -9,9 +9,17 @@ CREATE TABLE Projects (
   CodeUrl varchar(100),
   CodeText varchar(60),
   ImgUrl varchar(100)
-)
+);
 
 CREATE TABLE Categories (
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     CategoryName varchar(60)
-)
+);
+
+CREATE TABLE Users (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Name varchar(100),
+    SurnName varchar(100),
+    Login varchar(100),
+    Password varchar(255)
+);

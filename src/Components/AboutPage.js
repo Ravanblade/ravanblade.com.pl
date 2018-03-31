@@ -16,10 +16,10 @@ class AboutPage extends Component {
           <div class="row about-header">
             <p class="about-header-text">About me</p>
           </div>
-          <div class="row">
+          <div class="row about-bottom">
             <div class="col-lg-3 col-xs-12">
-
               <img src={require("../img/ryj.jpg")} class="about-picture"/>
+              <p class="about-story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <div class="col-lg-9 col-xs-12">
               <h3 class="about-skills">My skills</h3>

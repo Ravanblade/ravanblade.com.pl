@@ -19,12 +19,12 @@ class Project extends Component {
             <div class="project">
               <div class="project-view">
                   <img src={require(`../img/projects/${this.props.imgUrl}`)} class="img-p"/>
-                  <a href={this.props.url} >
+                  <a target="_blank" href={this.props.url} >
                   </a>
               </div>
                 <div class="project-body">
-                    <h4 class="project-title">{this.props.title}</h4>
-                    <p class="project-text"><strong>{this.props.technologies}</strong></p>
+                    <h5 class="project-title">{this.props.title}</h5>
+                    <p class="project-text"><strong>{'Technology: ' + this.props.technologies}</strong></p>
                     <p class="project-text">{this.props.text}</p>
                     {codeButton}
                     {urlButton}

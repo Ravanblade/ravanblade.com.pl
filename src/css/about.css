@@ -37,5 +37,14 @@ border-radius: .25em;
 .about-skills {
   color:black;
   text-align:left;
-  text-shadow: 2px 2px 4px #000000;
+}
+
+.about-story-text {
+  color:black;
+  text-align:justify;
+  font-size: 1em;
+}
+
+.about-bottom {
+  padding-bottom:3em;
 }

@@ -9,7 +9,7 @@ class ProjectsPage extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { projects:[], pageNumber: 0, category: -1, pageCount: 0 }
+    this.state = { projects:[], pageNumber: 0, category: -1, pageCount: 0, intervalId: 0 }
     this.handleChangePage = this.handleChangePage.bind(this);
   }
 
@@ -35,8 +35,20 @@ class ProjectsPage extends Component {
 
             this.setState({projects: projects, pageCount: res.data.count});
         });
+
   }
 
+  scrollStep = () => {
+    if (window.pageYOffset === 0) {
+        clearInterval(this.state.intervalId);
+    }
+    window.scroll(0, window.pageYOffset - 50);
+  }
+
+  scrollToTop = () => {
+    let intervalId = setInterval(this.scrollStep, 16.66);
+    this.setState({ intervalId: intervalId });
+  }
 
   componentDidMount() {
     this.getProjects();
@@ -44,8 +56,10 @@ class ProjectsPage extends Component {
 
   handleChangePage = (e, page) => {
     e.preventDefault();
+    this.scrollToTop();
     this.setState({pageNumber: page});
     this.getProjects(page);
+
   }
 
   render() {
@@ -53,7 +67,6 @@ class ProjectsPage extends Component {
     for (let i = 0; i < this.state.pageCount/6; i++) {
         pro.push(<li class="page-item"><a onClick={(e) => this.handleChangePage(e, i)} class="page-link" href="#">{i+1}</a></li>);
     }
-
 
     return(
       <div class="container wrapper fadeIn">

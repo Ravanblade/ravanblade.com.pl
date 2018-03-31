@@ -6,6 +6,7 @@
 
 .project img {
   border-radius: .25rem .25rem 0 0;
+  max-height:9em;
 }
 
 .project-view {
@@ -16,6 +17,10 @@
 .project-view img {
   position: relative;
   display: block;
+}
+
+.project p {
+  margin: 0;
 }
 
 .img-p {
@@ -43,7 +48,7 @@
 .btn-project {
   background-color: #343a40;
   border-color: #343a40;
-  margin: 0px 10px;
+  margin: 0.3em 1em;
   border-radius: .25em;
   min-width: 6.25em;
 }
@@ -56,6 +61,7 @@
 .pagination-center {
   margin-left: auto !important;
   margin-right: auto !important;
+  z-index: 9999;
 }
 
 .project-appear {
