@@ -23,14 +23,14 @@ class AboutPage extends Component {
             </div>
             <div class="col-lg-9 col-xs-12">
               <h3 class="about-skills">My skills</h3>
-                <SkillProgressBar skillName="C#" skillPercentage="75%"></SkillProgressBar>
-                <SkillProgressBar skillName="C/C++" skillPercentage="70%"></SkillProgressBar>
-                <SkillProgressBar skillName="SQL" skillPercentage="60%"></SkillProgressBar>
-                <SkillProgressBar skillName="HTML + CSS" skillPercentage="60%"></SkillProgressBar>
-                <SkillProgressBar skillName="ASP.NET MVC 5" skillPercentage="55%"></SkillProgressBar>
-                <SkillProgressBar skillName="Java" skillPercentage="55%"></SkillProgressBar>
-                <SkillProgressBar skillName="JavaScript" skillPercentage="50%"></SkillProgressBar>
-                <SkillProgressBar skillName="Pascal" skillPercentage="55%"></SkillProgressBar>
+                <SkillProgressBar skillName="C#" skillPercentage="65%"></SkillProgressBar>
+                <SkillProgressBar skillName="C/C++" skillPercentage="60%"></SkillProgressBar>
+                <SkillProgressBar skillName="SQL" skillPercentage="55%"></SkillProgressBar>
+                <SkillProgressBar skillName="ASP.NET MVC 5" skillPercentage="50%"></SkillProgressBar>
+                <SkillProgressBar skillName="Pascal" skillPercentage="50%"></SkillProgressBar>
+                <SkillProgressBar skillName="Java" skillPercentage="45%"></SkillProgressBar>
+                <SkillProgressBar skillName="HTML + CSS" skillPercentage="45%"></SkillProgressBar>
+                <SkillProgressBar skillName="JavaScript" skillPercentage="40%"></SkillProgressBar>
                 <SkillProgressBar skillName="PHP" skillPercentage="40%"></SkillProgressBar>
                 <SkillProgressBar skillName="ReactJS" skillPercentage="40%"></SkillProgressBar>
                 <SkillProgressBar skillName="Android SDK" skillPercentage="30%"></SkillProgressBar>

@@ -1,0 +1,18 @@
+.icon-circle {
+  font-size: 4em;
+  width:49%;
+  margin:1em;
+  float:center;
+}
+
+i.fa {
+  color: rgb(255,255,255);
+  text-shadow: 0px 0px 2px #fff;
+  padding: 0.5em 0.6em;
+  box-shadow: none;
+  transition: text-shadow 1s;
+}
+
+i.fa:hover {
+  text-shadow: 0 0 30px #fff;
+}

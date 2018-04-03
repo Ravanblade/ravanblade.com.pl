@@ -1,0 +1,5 @@
+1. Sprawdzic api czy dziala
+3. Poprawić responsywność pierwszej strony
+5. Na serwerze przekierować port 80 na 3000, 3001 zostawić na api
+6. Wrzucić wszystko na githuba
+7. Poprawić kod w każdej apce przed wrzuceniem

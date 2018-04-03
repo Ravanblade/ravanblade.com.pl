@@ -16,7 +16,7 @@ class CertificatesPage extends Component {
             <p class="certificates-header-text">Certificates</p>
           </div>
           <div class="row certificates-bottom">
-            <GalleryItem image="1.jpg" text="Bachelor of science"></GalleryItem>
+            <GalleryItem image="1.jpg" text="Bachelor of computer science"></GalleryItem>
             <GalleryItem image="2.jpg" text="IT specialist"></GalleryItem>
             <GalleryItem image="3.jpg" text="Basics of PLC programing"></GalleryItem>
             <GalleryItem image="4.jpg" text="Installing and configuring Windows Server 2012"></GalleryItem>

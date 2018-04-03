@@ -18,9 +18,10 @@ class GalleryItem extends Component {
   render(){
     const active = this.state.showModal ? ' show' : '';
     const img = require("../img/gallery/" + this.props.image);
+    const thumbnail = require("../img/gallery/thumbnails/" + this.props.image);
     return(
         <div class="col-lg-4 col-xs-12">
-          <img src={img} class="gallery-thumbnail" onClick={this.onClickHandler}/>
+          <img src={thumbnail} class="gallery-thumbnail" onClick={this.onClickHandler}/>
           <p class="gallery-text">{this.props.text}</p>
             <div class={"gallery-full-container" + active} onClick={this.onClickHandler}>
               <div class="gallery-content">

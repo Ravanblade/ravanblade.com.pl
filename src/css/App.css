@@ -117,11 +117,12 @@ a:focus, a:hover {
 
 #mainNav .navbar-toggler {
   font-size: 14px;
-  padding: 11px;
   color: white;
-  border: 1px solid white;
-}
 
+}
+ .navbar-toggler {
+   border: 0px !important;
+ }
 #mainNav .navbar-brand {
   font-weight: 700;
   text-shadow: 2px 2px 4px #000000;
