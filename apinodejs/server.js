@@ -9,7 +9,7 @@ var jsonwebtoken = require("jsonwebtoken");
 var cors = require('cors');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://mo1385_ravan:p6gYNkaKw1ZIUK5rQ811@mongo16.mydevil.net/mo1385_ravan');
+mongoose.connect('');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
