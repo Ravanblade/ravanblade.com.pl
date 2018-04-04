@@ -13,28 +13,32 @@ class ProjectsPage extends Component {
     this.handleChangePage = this.handleChangePage.bind(this);
   }
 
-   getProjects = async (pageN = 0) => {
-      await axios.get("http://2bdesign.lh.pl/all/API/ravanblade/db_request.php", {
+   getProjects = (pageN = 0) => {
+     axios.get("http://localhost:3001/projects/pagination")
+      .then((res) => {
+          this.setState({pageCount: res.data.count});
+      });
+      let data = JSON.stringify({
+              projectsPerPage: 6,
+              page: pageN
+          });
+          let config  = {
         headers: {
-            'Access-Control-Allow-Origin': '*'
-          },
-          params: {
-            type: 0,
-            projectsPerPage: 6,
-            page: pageN,
-            categoryId: this.state.category
-          }
-        })
-        .then((res) => {
+            'Content-Type': 'application/json'
+        }
+      };
+       axios.post("http://localhost:3001/projects/pagination",data, config)
+         .then((res) => {
 
-          let projects = res.data.projects.map( (project) => {
-            return(
-              <Project title={project.Title} imgUrl={project.ImgUrl}
-                 url={project.Url} technologies={project.Technologies} text={project.Text} codeUrl={project.CodeUrl} codeText={project.CodeText} urlText={project.UrlText}/>
-             )})
+           let projects = res.data.map( (project) => {
 
-            this.setState({projects: projects, pageCount: res.data.count});
-        });
+             return(
+               <Project title={project.Title} imgUrl={project.ImgUrl}
+                  url={project.Url} technologies={project.Technologies} text={project.Text} codeUrl={project.CodeUrl} codeText={project.CodeText} urlText={project.UrlText}/>
+              )})
+
+             this.setState({projects: projects});
+         });
 
   }
 

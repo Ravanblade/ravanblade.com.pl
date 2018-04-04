@@ -6,7 +6,7 @@ var verifyToken = (req, res, next) => {
   if (!token)
     return res.send({ auth: false, message: 'No token provided.' });
 
-  jwt.verify(token, "h$gdf%h&rtdh8rt", function(err, decoded) {
+  jwt.verify(token, "test", function(err, decoded) {
     if (err) return res.send({ auth: false, message: 'Failed to authenticate token.' });
 
     req.userId = decoded.id;

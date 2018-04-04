@@ -6,12 +6,14 @@ var project = require("./models/projects");
 var users = require("./models/users");
 var bodyParser = require("body-parser");
 var jsonwebtoken = require("jsonwebtoken");
+var cors = require('cors');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://mo1385_ravan:p6gYNkaKw1ZIUK5rQ811@mongo16.mydevil.net/mo1385_ravan');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors());
 
 app.use(function(req, res, next) {
   if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {

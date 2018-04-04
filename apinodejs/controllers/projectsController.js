@@ -7,6 +7,7 @@ exports.getAllProjects = (req, res) => {
 };
 
 exports.getProjectsPage = (req, res) => {
+  console.log(req);
   project.find({},(err, pro) => { if(err) res.send(err); res.json(pro);}).skip(req.body.projectsPerPage * req.body.page).limit(Number(req.body.projectsPerPage));
 };
 
